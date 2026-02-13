@@ -28,9 +28,9 @@ jobs:
     with:
       input_artifact: site-minified
 
-  # lint:
-  #   needs: minify
-  #   uses: ./.github/workflows/lint_and_format.yml
+  lint:
+    needs: minify
+    uses: ./.github/workflows/lint_and_format.yml
   
   lighthouse:
     needs: test
